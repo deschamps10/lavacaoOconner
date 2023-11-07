@@ -59,17 +59,12 @@ public class CadastroServ extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-<<<<<<< HEAD
-        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-=======
->>>>>>> 0bb566dc756753fc5e5ef91482364cd90bdfc80c
         campoDescricao.setViewportView(jTextArea1);
 
         getContentPane().add(campoDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 370, 110));
 
         jButton1.setBackground(new java.awt.Color(0, 255, 0));
         jButton1.setText("Cadastrar");
-<<<<<<< HEAD
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setVerifyInputWhenFocusTarget(false);
@@ -80,9 +75,6 @@ public class CadastroServ extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 210, 60));
-=======
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 210, 50));
->>>>>>> 0bb566dc756753fc5e5ef91482364cd90bdfc80c
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/black-background.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 410));

@@ -1,15 +1,13 @@
 package View;
 
 import Controller.LoginController;
-<<<<<<< HEAD
 import javax.swing.JTextField;
-=======
 import DAO.UsuarioDAO;
 import Model.Funcionario;
 import javax.swing.JTextField;
 import java.sql.*;
 import javax.swing.JOptionPane;
->>>>>>> 0bb566dc756753fc5e5ef91482364cd90bdfc80c
+
 
 public class Login extends javax.swing.JFrame {
 
@@ -150,29 +148,8 @@ public class Login extends javax.swing.JFrame {
             }
         });
     }
-
-    public JTextField getCampologin1() {
-        return campologin1;
-    }
-
-    public void setCampologin1(JTextField campologin1) {
-        this.campologin1 = campologin1;
-    }
-
-    public JTextField getCamposenha() {
-        return camposenha;
-    }
-
-    public void setCamposenha(JTextField camposenha) {
-        this.camposenha = camposenha;
-    }
-    
-    
-    
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaologin;
     private javax.swing.JTextField campologin1;
     private javax.swing.JTextField camposenha;
     private javax.swing.JLabel planodefundo;
-    // End of variables declaration//GEN-END:variables
 }

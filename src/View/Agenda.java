@@ -7,7 +7,6 @@ public class Agenda extends javax.swing.JFrame {
 
   
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -54,7 +53,7 @@ public class Agenda extends javax.swing.JFrame {
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(null));
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 280, 560, 40));
 
-        Observação.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
+        Observação.setFont(new java.awt.Font("Dialog", 0, 20)); 
         Observação.setText("Observação:");
         getContentPane().add(Observação, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, 120, -1));
 
@@ -65,7 +64,7 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(campoObservacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 750, 190));
 
-        Hora.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
+        Hora.setFont(new java.awt.Font("Dialog", 0, 20)); 
         Hora.setText("Hora:");
         getContentPane().add(Hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 60, -1));
 
@@ -77,7 +76,7 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(campoHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 260, 30));
 
-        Data.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
+        Data.setFont(new java.awt.Font("Dialog", 0, 20)); 
         Data.setText("Data:");
         getContentPane().add(Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 60, -1));
 

@@ -152,11 +152,9 @@ public class CadastroFunc extends javax.swing.JFrame {
         botaoCadastrar.setBackground(new java.awt.Color(0, 255, 0));
         botaoCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         botaoCadastrar.setText("Cadastrar");
-<<<<<<< HEAD
+
         botaoCadastrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         botaoCadastrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-=======
->>>>>>> 0bb566dc756753fc5e5ef91482364cd90bdfc80c
         botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCadastrarActionPerformed(evt);

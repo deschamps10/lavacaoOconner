@@ -51,10 +51,8 @@ public class CadastroCli extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 255, 0));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Cadastrar");
-<<<<<<< HEAD
+
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-=======
->>>>>>> 0bb566dc756753fc5e5ef91482364cd90bdfc80c
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
