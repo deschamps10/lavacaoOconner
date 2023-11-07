@@ -1,6 +1,11 @@
 package View;
 
-import Controler.LoginController;
+import Controller.LoginController;
+import DAO.UsuarioDAO;
+import Model.Funcionario;
+import javax.swing.JTextField;
+import java.sql.*;
+import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
 
@@ -39,6 +44,7 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(botaologin, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 530, 400, 60));
 
+        campologin1.setToolTipText("LabelLogin");
         campologin1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         campologin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,16 +65,55 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_camposenhaActionPerformed
 
     private void campologin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campologin1ActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_campologin1ActionPerformed
 
     private void botaologinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaologinActionPerformed
-        controller.entranoSistema();
+        try {
+            String usuario_nome, senha_usuario;
+            usuario_nome = campologin1.getText();
+            senha_usuario = camposenha.getText();
+
+            // Cria um objeto Usuario com as informações de usuário e senha.
+            Funcionario pessoa = new Funcionario(usuario_nome, senha_usuario);
+            pessoa.setEmail(usuario_nome);
+            pessoa.setSenha(senha_usuario);
+
+            // Cria um objeto UsuarioDAO para realizar operações no banco de dados.
+            UsuarioDAO objUsuarioDao = new UsuarioDAO();
+            ResultSet rsUsuarioDAO = objUsuarioDao.autenticaUsuario(pessoa);
+
+            if (rsUsuarioDAO.next()) {
+                // Se houver um resultado na consulta, redireciona para a próxima tela.
+                MenuPrinc objFrmPrincpalView = new MenuPrinc();
+                objFrmPrincpalView.setVisible(true);
+                //objFrmPrincpalView.dispose(); // Fecha a tela de login.
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuario ou senha Incorretos!"); // Exibe uma mensagem de erro.
+            }
+
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null, erro); // Trata exceções do banco de dados e exibe mensagens de erro.
+        }
     }//GEN-LAST:event_botaologinActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    public JTextField getCampologin1() {
+        return campologin1;
+    }
+
+    public void setCampologin1(JTextField campologin1) {
+        this.campologin1 = campologin1;
+    }
+
+    public JTextField getCamposenha() {
+        return camposenha;
+    }
+
+    public void setCamposenha(JTextField camposenha) {
+        this.camposenha = camposenha;
+    }
+
+  
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

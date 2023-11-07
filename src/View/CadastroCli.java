@@ -26,7 +26,6 @@ public class CadastroCli extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         Complemento = new javax.swing.JLabel();
         campoComplemento = new javax.swing.JTextField();
@@ -44,50 +43,55 @@ public class CadastroCli extends javax.swing.JFrame {
         telefone = new javax.swing.JLabel();
         campoNome = new javax.swing.JTextField();
         nome = new javax.swing.JLabel();
+        campoID = new javax.swing.JTextField();
+        Id = new javax.swing.JLabel();
         separador = new javax.swing.JSeparator();
         titulocadstrocliente = new javax.swing.JLabel();
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/black-background.png"))); // NOI18N
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(0, 255, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Cadastrar");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(null));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 440, 130, 40));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 130, 40));
 
+        Complemento.setForeground(new java.awt.Color(255, 255, 255));
         Complemento.setText("Complemento:");
         getContentPane().add(Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, -1, -1));
         getContentPane().add(campoComplemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 160, 30));
 
+        endereco.setForeground(new java.awt.Color(255, 255, 255));
         endereco.setText("Endereço:");
         getContentPane().add(endereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
         getContentPane().add(campoEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 160, 30));
 
+        Cep.setForeground(new java.awt.Color(255, 255, 255));
         Cep.setText("CEP:");
         getContentPane().add(Cep, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, -1, -1));
         getContentPane().add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 160, 30));
 
+        datadenascimento.setForeground(new java.awt.Color(255, 255, 255));
         datadenascimento.setText("Data de Nascimento:");
         getContentPane().add(datadenascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
         getContentPane().add(campoDataNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 160, 30));
 
         campoGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(campoGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 100, 30));
+        getContentPane().add(campoGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 90, -1));
 
-        genero.setText("Gênero");
-        getContentPane().add(genero, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+        genero.setForeground(new java.awt.Color(255, 255, 255));
+        genero.setText("Genero");
+        getContentPane().add(genero, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, -1, -1));
         getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 160, 30));
 
-        email.setText("E-mail:");
+        email.setForeground(new java.awt.Color(255, 255, 255));
+        email.setText("email:");
         getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
 
         campoTelefone.addActionListener(new java.awt.event.ActionListener() {
@@ -97,21 +101,32 @@ public class CadastroCli extends javax.swing.JFrame {
         });
         getContentPane().add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 160, 30));
 
+        telefone.setForeground(new java.awt.Color(255, 255, 255));
         telefone.setText("Telefone:");
         getContentPane().add(telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
-        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 370, 30));
+        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 180, 30));
 
+        nome.setForeground(new java.awt.Color(255, 255, 255));
         nome.setText("Nome Completo:");
-        getContentPane().add(nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+        getContentPane().add(nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
+        getContentPane().add(campoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 130, 30));
 
-        separador.setForeground(new java.awt.Color(0, 0, 0));
+        Id.setForeground(new java.awt.Color(255, 255, 255));
+        Id.setText("ID:");
+        getContentPane().add(Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        separador.setForeground(new java.awt.Color(255, 255, 255));
         separador.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         getContentPane().add(separador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 450, 10));
 
         titulocadstrocliente.setBackground(new java.awt.Color(255, 255, 255));
-        titulocadstrocliente.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        titulocadstrocliente.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        titulocadstrocliente.setForeground(new java.awt.Color(255, 255, 255));
         titulocadstrocliente.setText("Cadastro de Cliente:");
-        getContentPane().add(titulocadstrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 250, 40));
+        getContentPane().add(titulocadstrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 220, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/black-background.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -165,12 +180,14 @@ public class CadastroCli extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Cep;
     private javax.swing.JLabel Complemento;
+    private javax.swing.JLabel Id;
     private javax.swing.JTextField campoCep;
     private javax.swing.JTextField campoComplemento;
     private javax.swing.JTextField campoDataNascimento;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoEndereco;
     private javax.swing.JComboBox<String> campoGenero;
+    private javax.swing.JTextField campoID;
     private javax.swing.JTextField campoNome;
     private javax.swing.JTextField campoTelefone;
     private javax.swing.JLabel datadenascimento;

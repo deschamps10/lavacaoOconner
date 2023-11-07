@@ -38,9 +38,4 @@ public class MenuController {
         Agenda agendamento = new Agenda();
         agendamento.setVisible(true);
     }
-
-    public void teste() {
-
-    }
 }
-
