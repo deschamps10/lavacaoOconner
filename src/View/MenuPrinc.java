@@ -86,7 +86,7 @@ public class MenuPrinc extends javax.swing.JFrame {
     }//GEN-LAST:event_campoCadastroClienteActionPerformed
 
     private void campoCadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCadastroFuncionarioActionPerformed
-               controller.CadFunc();;
+               controller.CadFunc();
     }//GEN-LAST:event_campoCadastroFuncionarioActionPerformed
 
     private void campoCadastroServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCadastroServicoActionPerformed

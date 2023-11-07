@@ -7,6 +7,7 @@ package Model;
         private String cep;
         private String senha;
         private String nivelAcesso;
+ 
         
     public Funcionario(int id, String nome, char sexo, String dataNascimento, String cpf, String telefone, String email) {
         super(id, nome, sexo, dataNascimento, cpf, telefone, email);
@@ -16,9 +17,18 @@ package Model;
         this.endereco = endereco;
         this.senha = senha;
         this.nivelAcesso= nivelAcesso;
+        this.email = email;
         
     }
 
+    public Funcionario(String senha, String email) {
+        super(email);
+        this.senha = senha;
+    }
+    
+    
+
+    
     public String getEndereco() {
         return endereco;
     }

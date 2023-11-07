@@ -8,12 +8,12 @@ package View;
  *
  * @author Usuario
  */
-public class Agenda extends javax.swing.JFrame {
+public class Cancelamento extends javax.swing.JFrame {
 
     /**
      * Creates new form agenda
      */
-    public Agenda() {
+    public Cancelamento() {
         initComponents();
     }
 
@@ -26,8 +26,6 @@ public class Agenda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         Observação = new javax.swing.JLabel();
         campoObservacao = new javax.swing.JScrollPane();
@@ -43,6 +41,8 @@ public class Agenda extends javax.swing.JFrame {
         Nome = new javax.swing.JLabel();
         campoNome = new javax.swing.JComboBox<>();
         id = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
         campoId = new javax.swing.JTextField();
         painel01 = new javax.swing.JLabel();
         teladefundo = new javax.swing.JLabel();
@@ -50,114 +50,115 @@ public class Agenda extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "ID", "Nome", "Serviço", "Valor", "Data", "Hora", "Observação"
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setText("Cancelar serviço");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
-        ));
-        jScrollPane2.setViewportView(jTable2);
-
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 1120, 350));
-
-        jButton1.setBackground(new java.awt.Color(0, 255, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jButton1.setText("Agendar");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(null));
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 280, 560, 40));
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 630, 400, 40));
 
         Observação.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         Observação.setText("Observação:");
-        getContentPane().add(Observação, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, 120, -1));
+        getContentPane().add(Observação, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, 120, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         campoObservacao.setViewportView(jTextArea1);
 
-        getContentPane().add(campoObservacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 700, 150));
+        getContentPane().add(campoObservacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 420, 750, 250));
 
         Hora.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         Hora.setText("Hora:");
-        getContentPane().add(Hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 60, -1));
+        getContentPane().add(Hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 60, -1));
 
-        campoHora.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         campoHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoHoraActionPerformed(evt);
             }
         });
-        getContentPane().add(campoHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 260, 30));
+        getContentPane().add(campoHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, 260, 30));
 
         Data.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         Data.setText("Data:");
-        getContentPane().add(Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 60, -1));
+        getContentPane().add(Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 60, -1));
 
         campoData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoDataActionPerformed(evt);
             }
         });
-        getContentPane().add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 260, 30));
+        getContentPane().add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 210, 260, 30));
 
         Valor.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         Valor.setText("Valor:");
-        getContentPane().add(Valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 60, -1));
+        getContentPane().add(Valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, 60, -1));
 
-        campoValor.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         campoValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoValorActionPerformed(evt);
             }
         });
-        getContentPane().add(campoValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 260, 30));
+        getContentPane().add(campoValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 290, 260, 30));
 
         Serviço.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         Serviço.setText("Serviço:");
-        getContentPane().add(Serviço, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 80, -1));
+        getContentPane().add(Serviço, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 80, -1));
 
         campoServico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        campoServico.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         campoServico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoServicoActionPerformed(evt);
             }
         });
-        getContentPane().add(campoServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 260, 30));
+        getContentPane().add(campoServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 260, 30));
 
         Nome.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         Nome.setText("Nome:");
-        getContentPane().add(Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 60, -1));
+        getContentPane().add(Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 60, -1));
 
         campoNome.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        campoNome.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         campoNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 260, 30));
+        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 260, 30));
 
         id.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         id.setText("ID:");
-        getContentPane().add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 30, -1));
+        getContentPane().add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 30, -1));
 
-        campoId.setBorder(javax.swing.BorderFactory.createLineBorder(null));
-        getContentPane().add(campoId, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 260, 30));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(null));
+        jPanel1.setToolTipText("");
 
+        jTextField1.setBackground(new java.awt.Color(242, 242, 242));
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jTextField1.setText("CANCELAMENTO DE SERVIÇO");
+        jTextField1.setAlignmentX(1.0F);
+        jTextField1.setAlignmentY(1.0F);
+        jTextField1.setBorder(null);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField1);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 300, 50));
+        getContentPane().add(campoId, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 260, 30));
+
+        painel01.setBackground(new java.awt.Color(0, 0, 0));
+        painel01.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         painel01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/Design sem nome (2).png"))); // NOI18N
-        getContentPane().add(painel01, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 1290, 680));
+        getContentPane().add(painel01, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 740));
 
         teladefundo.setBackground(new java.awt.Color(0, 0, 0));
         teladefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/black-background.png"))); // NOI18N
-        teladefundo.setText("4556   ");
         teladefundo.setMaximumSize(new java.awt.Dimension(3000, 1500));
-        getContentPane().add(teladefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 800));
+        getContentPane().add(teladefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 1420, 800));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -182,6 +183,14 @@ public class Agenda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoHoraActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -199,21 +208,23 @@ public class Agenda extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Agenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cancelamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Agenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cancelamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Agenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cancelamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Agenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cancelamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Agenda().setVisible(true);
+                new Cancelamento().setVisible(true);
             }
         });
     }
@@ -234,9 +245,9 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JTextField campoValor;
     private javax.swing.JLabel id;
     private javax.swing.JButton jButton1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel painel01;
     private javax.swing.JLabel teladefundo;
     // End of variables declaration//GEN-END:variables

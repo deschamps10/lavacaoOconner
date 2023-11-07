@@ -23,6 +23,12 @@ package Model;
 
     }
 
+    public Pessoa(String email) {
+        this.email = email;
+    }
+    
+    
+
     public Pessoa(int id, String nome) {
         this.id = id;
         this.nome = nome;
