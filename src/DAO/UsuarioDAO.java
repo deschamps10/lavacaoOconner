@@ -12,7 +12,7 @@ public class UsuarioDAO {
         conexao = new Conexao().conectaBD();
 
         try {
-            String sql = "select * from Funcionario where EmailFunc = ? and SenhaFunc = ?"; 
+            String sql = "select * from Funcionarios where emailFunc = ? and passFunc = ?"; 
             PreparedStatement pstm = conexao.prepareStatement(sql); 
 
             // Define os parâmetros na consulta SQL.

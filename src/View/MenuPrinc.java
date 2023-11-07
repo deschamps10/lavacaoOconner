@@ -1,6 +1,6 @@
 package View;
 
-import Controler.MenuController;
+import Controller.MenuController;
 
 public class MenuPrinc extends javax.swing.JFrame {
 

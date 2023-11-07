@@ -13,7 +13,7 @@ public class Conexao {
         Connection conector = null; // Declara uma variável para armazenar a conexão.
 
         try {
-            String url = "jdbc:mysql://localhost:3306/lavacao_DB?user=root&password=" ;
+            String url = "jdbc:mysql://localhost:3306/lavacaoOconner?user=root&password=" ;
 
 
             conector = DriverManager.getConnection(url);

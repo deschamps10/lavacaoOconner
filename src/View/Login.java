@@ -1,6 +1,7 @@
 package View;
 
-import Controler.LoginController;
+import Controller.LoginController;
+import javax.swing.JTextField;
 
 public class Login extends javax.swing.JFrame {
 
@@ -102,6 +103,24 @@ public class Login extends javax.swing.JFrame {
         });
     }
 
+    public JTextField getCampologin1() {
+        return campologin1;
+    }
+
+    public void setCampologin1(JTextField campologin1) {
+        this.campologin1 = campologin1;
+    }
+
+    public JTextField getCamposenha() {
+        return camposenha;
+    }
+
+    public void setCamposenha(JTextField camposenha) {
+        this.camposenha = camposenha;
+    }
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaologin;
     private javax.swing.JTextField campologin1;
