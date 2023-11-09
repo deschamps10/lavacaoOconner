@@ -91,19 +91,19 @@ public class MenuPrinc extends javax.swing.JFrame {
     }//GEN-LAST:event_CadFuncionarioActionPerformed
 
     private void CadServiçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadServiçoActionPerformed
-        // TODO add your handling code here:
+        controller.CadServico();
     }//GEN-LAST:event_CadServiçoActionPerformed
 
     private void CadFuncionario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadFuncionario1ActionPerformed
-        // TODO add your handling code here:
+              controller.CadFunc();
     }//GEN-LAST:event_CadFuncionario1ActionPerformed
 
     private void CadFuncionario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadFuncionario2ActionPerformed
-        // TODO add your handling code here:
+               controller.agendamento();
     }//GEN-LAST:event_CadFuncionario2ActionPerformed
 
     private void CadFuncionario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadFuncionario3ActionPerformed
-        // TODO add your handling code here:
+            controller.CadCliente();
     }//GEN-LAST:event_CadFuncionario3ActionPerformed
 
     public static void main(String args[]) {
