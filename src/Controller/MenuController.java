@@ -39,4 +39,3 @@ public class MenuController {
         agendamento.setVisible(true);
     }
 }
-

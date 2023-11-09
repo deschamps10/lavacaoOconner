@@ -1,13 +1,11 @@
 package View;
 
 import Controller.LoginController;
-import javax.swing.JTextField;
 import DAO.UsuarioDAO;
 import Model.Funcionario;
 import javax.swing.JTextField;
 import java.sql.*;
 import javax.swing.JOptionPane;
-
 
 public class Login extends javax.swing.JFrame {
 
@@ -28,6 +26,7 @@ public class Login extends javax.swing.JFrame {
         planodefundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         camposenha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -36,7 +35,7 @@ public class Login extends javax.swing.JFrame {
                 camposenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(camposenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, 410, 30));
+        getContentPane().add(camposenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 470, 410, 40));
 
         botaologin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/Botão de entrar.png"))); // NOI18N
         botaologin.addActionListener(new java.awt.event.ActionListener() {
@@ -44,7 +43,7 @@ public class Login extends javax.swing.JFrame {
                 botaologinActionPerformed(evt);
             }
         });
-        getContentPane().add(botaologin, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 530, 400, 60));
+        getContentPane().add(botaologin, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 590, 390, 60));
 
         campologin1.setToolTipText("LabelLogin");
         campologin1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -53,11 +52,11 @@ public class Login extends javax.swing.JFrame {
                 campologin1ActionPerformed(evt);
             }
         });
-        getContentPane().add(campologin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, 410, 30));
+        getContentPane().add(campologin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, 410, 40));
 
-        planodefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/Estética login sem botões.jpg"))); // NOI18N
+        planodefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/Brian estética automotiva.jpg"))); // NOI18N
         planodefundo.setText("pla");
-        getContentPane().add(planodefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 940, 740));
+        getContentPane().add(planodefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 890));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -148,8 +147,11 @@ public class Login extends javax.swing.JFrame {
             }
         });
     }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaologin;
     private javax.swing.JTextField campologin1;
     private javax.swing.JTextField camposenha;
     private javax.swing.JLabel planodefundo;
+    // End of variables declaration//GEN-END:variables
 }

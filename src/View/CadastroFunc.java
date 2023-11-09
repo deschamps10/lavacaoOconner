@@ -28,8 +28,6 @@ public class CadastroFunc extends javax.swing.JFrame {
 
         titulocadstrocliente = new javax.swing.JLabel();
         separador = new javax.swing.JSeparator();
-        Id = new javax.swing.JLabel();
-        campoID = new javax.swing.JTextField();
         nome = new javax.swing.JLabel();
         campoNome = new javax.swing.JTextField();
         CPF = new javax.swing.JLabel();
@@ -59,53 +57,48 @@ public class CadastroFunc extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulocadstrocliente.setBackground(new java.awt.Color(255, 255, 255));
-        titulocadstrocliente.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        titulocadstrocliente.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         titulocadstrocliente.setForeground(new java.awt.Color(255, 255, 255));
-        titulocadstrocliente.setText("Cadastro de Funcionario:");
-        getContentPane().add(titulocadstrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 280, 30));
+        titulocadstrocliente.setText("Cadastro de Funcionario");
+        getContentPane().add(titulocadstrocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 290, 40));
 
         separador.setForeground(new java.awt.Color(255, 255, 255));
         separador.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        getContentPane().add(separador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 450, 10));
-
-        Id.setForeground(new java.awt.Color(255, 255, 255));
-        Id.setText("ID:");
-        getContentPane().add(Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
-        getContentPane().add(campoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 130, 30));
+        getContentPane().add(separador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 620, 10));
 
         nome.setForeground(new java.awt.Color(255, 255, 255));
         nome.setText("Nome Completo:");
-        getContentPane().add(nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
-        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 180, 30));
+        getContentPane().add(nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 470, -1));
+        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 560, 30));
 
         CPF.setForeground(new java.awt.Color(255, 255, 255));
         CPF.setText("CPF:");
-        getContentPane().add(CPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, -1));
-        getContentPane().add(campoCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 160, 30));
+        getContentPane().add(CPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+        getContentPane().add(campoCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 160, 30));
 
         datadenascimento.setForeground(new java.awt.Color(255, 255, 255));
         datadenascimento.setText("Data de Nascimento:");
-        getContentPane().add(datadenascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
-        getContentPane().add(campoDataNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 160, 30));
+        getContentPane().add(datadenascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, -1));
+        getContentPane().add(campoDataNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 160, 30));
 
         telefone.setForeground(new java.awt.Color(255, 255, 255));
         telefone.setText("Telefone:");
-        getContentPane().add(telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+        getContentPane().add(telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
 
         campoTelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoTelefoneActionPerformed(evt);
             }
         });
-        getContentPane().add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 160, 30));
+        getContentPane().add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 160, 30));
 
         email.setForeground(new java.awt.Color(255, 255, 255));
-        email.setText("email:");
-        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
-        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 160, 30));
+        email.setText("E-mail:");
+        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
+        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 160, 30));
 
         genero.setForeground(new java.awt.Color(255, 255, 255));
-        genero.setText("Genero");
+        genero.setText("Gênero");
         getContentPane().add(genero, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, 50, 10));
 
         campoGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -114,56 +107,54 @@ public class CadastroFunc extends javax.swing.JFrame {
                 campoGeneroItemStateChanged(evt);
             }
         });
-        getContentPane().add(campoGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 130, -1));
+        getContentPane().add(campoGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 160, 30));
 
         endereco.setForeground(new java.awt.Color(255, 255, 255));
         endereco.setText("Endereço:");
-        getContentPane().add(endereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
-        getContentPane().add(campoEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 160, 30));
+        getContentPane().add(endereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        getContentPane().add(campoEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 160, 30));
 
         Cep.setForeground(new java.awt.Color(255, 255, 255));
         Cep.setText("CEP:");
-        getContentPane().add(Cep, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, -1, -1));
-        getContentPane().add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 160, 30));
+        getContentPane().add(Cep, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, -1, -1));
+        getContentPane().add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 160, 30));
 
         Complemento.setForeground(new java.awt.Color(255, 255, 255));
         Complemento.setText("Complemento:");
-        getContentPane().add(Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, -1, -1));
-        getContentPane().add(campoComplemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 160, 30));
+        getContentPane().add(Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, -1, -1));
+        getContentPane().add(campoComplemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 160, 30));
 
         niveldeacesso.setForeground(new java.awt.Color(255, 255, 255));
         niveldeacesso.setText("Acesso:");
-        getContentPane().add(niveldeacesso, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
+        getContentPane().add(niveldeacesso, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, -1, -1));
 
         campoNiveldeAcesso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(campoNiveldeAcesso, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 140, -1));
+        getContentPane().add(campoNiveldeAcesso, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, 160, 30));
 
         Senha.setForeground(new java.awt.Color(255, 255, 255));
         Senha.setText("Senha:");
-        getContentPane().add(Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, -1, -1));
+        getContentPane().add(Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, -1, -1));
 
         campoSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoSenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 160, 30));
+        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 160, 30));
 
         botaoCadastrar.setBackground(new java.awt.Color(0, 255, 0));
-        botaoCadastrar.setForeground(new java.awt.Color(255, 255, 255));
-        botaoCadastrar.setText("Cadastrar");
-
+        botaoCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 25)); // NOI18N
+        botaoCadastrar.setText("CADASTRAR");
         botaoCadastrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        botaoCadastrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(botaoCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 260, 40));
+        getContentPane().add(botaoCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, 290, 50));
 
-        telafundofuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/black-background.png"))); // NOI18N
-        getContentPane().add(telafundofuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 530));
+        telafundofuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/background cadastros.jpg"))); // NOI18N
+        getContentPane().add(telafundofuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 930));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -224,7 +215,6 @@ public class CadastroFunc extends javax.swing.JFrame {
     private javax.swing.JLabel CPF;
     private javax.swing.JLabel Cep;
     private javax.swing.JLabel Complemento;
-    private javax.swing.JLabel Id;
     private javax.swing.JLabel Senha;
     private javax.swing.JButton botaoCadastrar;
     private javax.swing.JTextField campoCPF;
@@ -234,7 +224,6 @@ public class CadastroFunc extends javax.swing.JFrame {
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoEndereco;
     private javax.swing.JComboBox<String> campoGenero;
-    private javax.swing.JTextField campoID;
     private javax.swing.JComboBox<String> campoNiveldeAcesso;
     private javax.swing.JTextField campoNome;
     private javax.swing.JTextField campoSenha;
