@@ -1,7 +1,7 @@
 
 package Model;
 
-    public class Pessoa {
+    abstract public class Pessoa {
         
         protected int id;
         protected String nome;
@@ -20,19 +20,21 @@ package Model;
         this.cpf = cpf;
         this.telefone = telefone;
         this.email = email;
-
     }
 
-    public Pessoa(String email) {
+    public Pessoa(String nome, char sexo, String dataNascimento, String cpf, String telefone, String email) {
+        this.nome = nome;
+        this.sexo = sexo;
+        this.dataNascimento = dataNascimento;
+        this.cpf = cpf;
+        this.telefone = telefone;
         this.email = email;
     }
-    
-    
 
-    public Pessoa(int id, String nome) {
-        this.id = id;
+    public Pessoa(String nome) {
         this.nome = nome;
     }
+    
 
     public int getId() {
         return id;

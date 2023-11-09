@@ -7,21 +7,28 @@ package Model;
         private String cep;
         private String senha;
         private String nivelAcesso;
- 
-        
-    public Funcionario(int id, String nome, char sexo, String dataNascimento, String cpf, String telefone, String email) {
+
+    public Funcionario(int id, String nome, char sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento, String senha, String nivelAcesso) {
         super(id, nome, sexo, dataNascimento, cpf, telefone, email);
-        
-        this.cep = cep;
-        this.complemento = complemento;
         this.endereco = endereco;
+        this.complemento = complemento;
+        this.cep = cep;
         this.senha = senha;
-        this.nivelAcesso= nivelAcesso;
-        this.email = email;
-        
+        this.nivelAcesso = nivelAcesso;
     }
 
-    public Funcionario(String senha, String email) {
+    public Funcionario(String nome, char sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento, String senha, String nivelAcesso) {
+        super(nome, sexo, dataNascimento, cpf, telefone, email);
+        this.endereco = endereco;
+        this.complemento = complemento;
+        this.cep = cep;
+        this.senha = senha;
+        this.nivelAcesso = nivelAcesso;
+    }
+    
+    
+
+    public Funcionario(String email, String senha) {
         super(email);
         this.senha = senha;
     }

@@ -5,18 +5,24 @@ package Model;
         private String cep;
         private String endereco;
         private String complemento;
-        
-    public Cliente(int id, String nome, char sexo, String dataNascimento, String cpf, String telefone, String email) {
+
+    public Cliente(int id, String nome, char sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento) {
         super(id, nome, sexo, dataNascimento, cpf, telefone, email);
-        
         this.cep = cep;
         this.endereco = endereco;
         this.complemento = complemento;
-        
     }
 
-    public Cliente(String cep, String endereco, String complemento, int id, String nome) {
-        super(id, nome);
+    public Cliente(String nome, char sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento) {
+        super(nome, sexo, dataNascimento, cpf, telefone, email);
+        this.cep = cep;
+        this.endereco = endereco;
+        this.complemento = complemento;
+    }
+
+    public Cliente(String nome, String cep, String endereco, String complemento) {
+        // Talvez seja um construtor desnecessário.
+        super(nome);
         this.cep = cep;
         this.endereco = endereco;
         this.complemento = complemento;

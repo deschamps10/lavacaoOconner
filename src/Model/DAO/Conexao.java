@@ -1,4 +1,4 @@
-package DAO;
+package Model.DAO;
 
 import java.sql.Connection;
 import javax.swing.JOptionPane; 
@@ -13,7 +13,7 @@ public class Conexao {
         Connection conector = null; // Declara uma variável para armazenar a conexão.
 
         try {
-            String url = "jdbc:mysql://localhost:3306/lavacao_DB?user=root&password=" ;
+            String url = "jdbc:mysql://localhost:3306/lavacaooconner?user=root&password=" ;
 
 
             conector = DriverManager.getConnection(url);
