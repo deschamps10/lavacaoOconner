@@ -66,7 +66,7 @@ public class Agenda extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(0, 255, 0));
         jButton1.setText("Agendar");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setBorder(null);
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, 560, 40));
 
         Observação.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
@@ -142,7 +142,7 @@ public class Agenda extends javax.swing.JFrame {
         getContentPane().add(campoId, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 260, 30));
 
         teladefundo.setBackground(new java.awt.Color(0, 0, 0));
-        teladefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/Fundo 1920 Agenda.jpg"))); // NOI18N
+        teladefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Fundo 1920 Agenda.jpg"))); // NOI18N
         teladefundo.setMaximumSize(new java.awt.Dimension(3000, 1500));
         getContentPane().add(teladefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 800));
 

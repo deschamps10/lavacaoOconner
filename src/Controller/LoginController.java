@@ -3,7 +3,7 @@ package Controller;
 import java.sql.*;
 import View.MenuPrinc;
 import View.Login;
-import Model.DAO.UsuarioDAO;
+import ModelDAO.UsuarioDAO;
 import Model.Funcionario;
 import javax.swing.JOptionPane;
 

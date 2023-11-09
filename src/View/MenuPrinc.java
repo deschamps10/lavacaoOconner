@@ -28,7 +28,7 @@ public class MenuPrinc extends javax.swing.JFrame {
 
         CadFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         CadFuncionario.setText("Agendamento");
-        CadFuncionario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CadFuncionario.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         CadFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadFuncionarioActionPerformed(evt);
@@ -36,9 +36,10 @@ public class MenuPrinc extends javax.swing.JFrame {
         });
         getContentPane().add(CadFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 260, 60));
 
+        CadServiço.setBackground(new java.awt.Color(204, 204, 204));
         CadServiço.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         CadServiço.setText("Cadastro de Serviço");
-        CadServiço.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CadServiço.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         CadServiço.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadServiçoActionPerformed(evt);
@@ -48,7 +49,7 @@ public class MenuPrinc extends javax.swing.JFrame {
 
         CadFuncionario1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         CadFuncionario1.setText("Cadastro de Funcionário");
-        CadFuncionario1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CadFuncionario1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         CadFuncionario1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadFuncionario1ActionPerformed(evt);
@@ -58,7 +59,7 @@ public class MenuPrinc extends javax.swing.JFrame {
 
         CadFuncionario2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         CadFuncionario2.setText("Cancelamento de serviço");
-        CadFuncionario2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CadFuncionario2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         CadFuncionario2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadFuncionario2ActionPerformed(evt);
@@ -68,7 +69,7 @@ public class MenuPrinc extends javax.swing.JFrame {
 
         CadFuncionario3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         CadFuncionario3.setText("Cadastro de Cliente");
-        CadFuncionario3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CadFuncionario3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         CadFuncionario3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadFuncionario3ActionPerformed(evt);
@@ -77,7 +78,7 @@ public class MenuPrinc extends javax.swing.JFrame {
         getContentPane().add(CadFuncionario3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 260, 60));
 
         teladefundo.setBackground(new java.awt.Color(0, 0, 0));
-        teladefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/MenuPrincipal background.jpg"))); // NOI18N
+        teladefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/MenuPrincipal background.jpg"))); // NOI18N
         teladefundo.setMaximumSize(new java.awt.Dimension(3000, 1500));
         getContentPane().add(teladefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 800));
         setJMenuBar(jMenuBar1);

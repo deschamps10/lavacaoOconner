@@ -46,7 +46,7 @@
     <Component class="javax.swing.JButton" name="botaologin">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/viewimagens/Bot&#xe3;o de entrar.png"/>
+          <Image iconType="3" name="/View/imagens/Bot&#xe3;o de entrar.png"/>
         </Property>
       </Properties>
       <Events>
@@ -79,7 +79,7 @@
     <Component class="javax.swing.JLabel" name="planodefundo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/viewimagens/Brian est&#xe9;tica automotiva.jpg"/>
+          <Image iconType="3" name="/View/imagens/Brian est&#xe9;tica automotiva.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="pla"/>
       </Properties>

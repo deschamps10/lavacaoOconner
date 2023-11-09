@@ -324,9 +324,7 @@
         </Property>
         <Property name="text" type="java.lang.String" value="CADASTRAR"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-            <BevelBorder/>
-          </Border>
+          <Border info="null"/>
         </Property>
       </Properties>
       <Events>
@@ -341,7 +339,7 @@
     <Component class="javax.swing.JLabel" name="telafundofuncionario">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/viewimagens/background cadastros.jpg"/>
+          <Image iconType="3" name="/View/imagens/background cadastros.jpg"/>
         </Property>
       </Properties>
       <Constraints>

@@ -29,7 +29,7 @@ public class Login extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        camposenha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        camposenha.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         camposenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 camposenhaActionPerformed(evt);
@@ -37,7 +37,7 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(camposenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 470, 410, 40));
 
-        botaologin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/Botão de entrar.png"))); // NOI18N
+        botaologin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Botão de entrar.png"))); // NOI18N
         botaologin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaologinActionPerformed(evt);
@@ -46,7 +46,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(botaologin, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 590, 390, 60));
 
         campologin1.setToolTipText("LabelLogin");
-        campologin1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        campologin1.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         campologin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campologin1ActionPerformed(evt);
@@ -54,7 +54,7 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(campologin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, 410, 40));
 
-        planodefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/Brian estética automotiva.jpg"))); // NOI18N
+        planodefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Brian estética automotiva.jpg"))); // NOI18N
         planodefundo.setText("pla");
         getContentPane().add(planodefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 890));
 

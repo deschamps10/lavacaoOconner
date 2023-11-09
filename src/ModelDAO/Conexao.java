@@ -1,4 +1,4 @@
-package Model.DAO;
+package ModelDAO;
 
 import java.sql.Connection;
 import javax.swing.JOptionPane; 

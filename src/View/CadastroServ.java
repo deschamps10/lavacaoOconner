@@ -29,7 +29,7 @@ public class CadastroServ extends javax.swing.JFrame {
         botaoCadastrar.setBackground(new java.awt.Color(0, 255, 0));
         botaoCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 25)); // NOI18N
         botaoCadastrar.setText("CADASTRAR");
-        botaoCadastrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        botaoCadastrar.setBorder(null);
         botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCadastrarActionPerformed(evt);
@@ -67,7 +67,7 @@ public class CadastroServ extends javax.swing.JFrame {
 
         getContentPane().add(campoDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 370, 110));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/background cadastros.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/background cadastros.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 840));
 
         pack();
