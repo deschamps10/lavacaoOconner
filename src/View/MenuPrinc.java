@@ -28,59 +28,58 @@ public class MenuPrinc extends javax.swing.JFrame {
 
         CadFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         CadFuncionario.setText("Agendamento");
-        CadFuncionario.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        CadFuncionario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CadFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadFuncionarioActionPerformed(evt);
             }
         });
-        getContentPane().add(CadFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 260, 60));
+        getContentPane().add(CadFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 260, 60));
 
-        CadServiço.setBackground(new java.awt.Color(204, 204, 204));
         CadServiço.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         CadServiço.setText("Cadastro de Serviço");
-        CadServiço.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        CadServiço.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CadServiço.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadServiçoActionPerformed(evt);
             }
         });
-        getContentPane().add(CadServiço, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 260, 60));
+        getContentPane().add(CadServiço, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 260, 60));
 
         CadFuncionario1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         CadFuncionario1.setText("Cadastro de Funcionário");
-        CadFuncionario1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        CadFuncionario1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CadFuncionario1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadFuncionario1ActionPerformed(evt);
             }
         });
-        getContentPane().add(CadFuncionario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 260, 60));
+        getContentPane().add(CadFuncionario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 260, 60));
 
         CadFuncionario2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         CadFuncionario2.setText("Cancelamento de serviço");
-        CadFuncionario2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        CadFuncionario2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CadFuncionario2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadFuncionario2ActionPerformed(evt);
             }
         });
-        getContentPane().add(CadFuncionario2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 260, 60));
+        getContentPane().add(CadFuncionario2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 600, 260, 60));
 
         CadFuncionario3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         CadFuncionario3.setText("Cadastro de Cliente");
-        CadFuncionario3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        CadFuncionario3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CadFuncionario3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadFuncionario3ActionPerformed(evt);
             }
         });
-        getContentPane().add(CadFuncionario3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 260, 60));
+        getContentPane().add(CadFuncionario3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 260, 60));
 
         teladefundo.setBackground(new java.awt.Color(0, 0, 0));
-        teladefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/MenuPrincipal background.jpg"))); // NOI18N
+        teladefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/Backgorund MenuPrincipal.jpg"))); // NOI18N
         teladefundo.setMaximumSize(new java.awt.Dimension(3000, 1500));
-        getContentPane().add(teladefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 800));
+        getContentPane().add(teladefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, 0, 1540, 1080));
         setJMenuBar(jMenuBar1);
 
         pack();
@@ -91,19 +90,19 @@ public class MenuPrinc extends javax.swing.JFrame {
     }//GEN-LAST:event_CadFuncionarioActionPerformed
 
     private void CadServiçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadServiçoActionPerformed
-        controller.CadServico();
+        // TODO add your handling code here:
     }//GEN-LAST:event_CadServiçoActionPerformed
 
     private void CadFuncionario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadFuncionario1ActionPerformed
-              controller.CadFunc();
+        // TODO add your handling code here:
     }//GEN-LAST:event_CadFuncionario1ActionPerformed
 
     private void CadFuncionario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadFuncionario2ActionPerformed
-               controller.agendamento();
+        // TODO add your handling code here:
     }//GEN-LAST:event_CadFuncionario2ActionPerformed
 
     private void CadFuncionario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadFuncionario3ActionPerformed
-            controller.CadCliente();
+        // TODO add your handling code here:
     }//GEN-LAST:event_CadFuncionario3ActionPerformed
 
     public static void main(String args[]) {

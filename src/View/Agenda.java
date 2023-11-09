@@ -26,6 +26,8 @@ public class Agenda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
@@ -46,8 +48,13 @@ public class Agenda extends javax.swing.JFrame {
         campoId = new javax.swing.JTextField();
         teladefundo = new javax.swing.JLabel();
 
+        jLabel1.setText("jLabel1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/Botão voltar PRETO.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 0, 170, 80));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -62,16 +69,22 @@ public class Agenda extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 1120, 350));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 1140, 350));
 
         jButton1.setBackground(new java.awt.Color(0, 255, 0));
-        jButton1.setText("Agendar");
-        jButton1.setBorder(null);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, 560, 40));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton1.setText("AGENDAR");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 750, 40));
 
         Observação.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         Observação.setText("Observação:");
-        getContentPane().add(Observação, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, 120, -1));
+        getContentPane().add(Observação, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 50, 120, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -83,6 +96,7 @@ public class Agenda extends javax.swing.JFrame {
         Hora.setText("Hora:");
         getContentPane().add(Hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 60, -1));
 
+        campoHora.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         campoHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoHoraActionPerformed(evt);
@@ -94,6 +108,7 @@ public class Agenda extends javax.swing.JFrame {
         Data.setText("Data:");
         getContentPane().add(Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 60, -1));
 
+        campoData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         campoData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoDataActionPerformed(evt);
@@ -105,6 +120,7 @@ public class Agenda extends javax.swing.JFrame {
         Valor.setText("Valor:");
         getContentPane().add(Valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 60, -1));
 
+        campoValor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         campoValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoValorActionPerformed(evt);
@@ -117,6 +133,7 @@ public class Agenda extends javax.swing.JFrame {
         getContentPane().add(Serviço, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 80, -1));
 
         campoServico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        campoServico.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         campoServico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoServicoActionPerformed(evt);
@@ -129,6 +146,7 @@ public class Agenda extends javax.swing.JFrame {
         getContentPane().add(Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 60, -1));
 
         campoNome.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        campoNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         campoNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoNomeActionPerformed(evt);
@@ -139,10 +157,12 @@ public class Agenda extends javax.swing.JFrame {
         id.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         id.setText("ID:");
         getContentPane().add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 30, -1));
+
+        campoId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(campoId, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 260, 30));
 
         teladefundo.setBackground(new java.awt.Color(0, 0, 0));
-        teladefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Fundo 1920 Agenda.jpg"))); // NOI18N
+        teladefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/Fundo 1920 Agenda.jpg"))); // NOI18N
         teladefundo.setMaximumSize(new java.awt.Dimension(3000, 1500));
         getContentPane().add(teladefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 800));
 
@@ -168,6 +188,10 @@ public class Agenda extends javax.swing.JFrame {
     private void campoHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoHoraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoHoraActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -221,6 +245,8 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JTextField campoValor;
     private javax.swing.JLabel id;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextArea jTextArea1;

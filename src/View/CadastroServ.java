@@ -11,6 +11,7 @@ public class CadastroServ extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         botaoCadastrar = new javax.swing.JButton();
         titulocadstrocliente = new javax.swing.JLabel();
         separador = new javax.swing.JSeparator();
@@ -26,16 +27,19 @@ public class CadastroServ extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/Botão voltar Branco menor.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, -1, 80));
+
         botaoCadastrar.setBackground(new java.awt.Color(0, 255, 0));
         botaoCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 25)); // NOI18N
         botaoCadastrar.setText("CADASTRAR");
-        botaoCadastrar.setBorder(null);
+        botaoCadastrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(botaoCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 290, 50));
+        getContentPane().add(botaoCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 290, 50));
 
         titulocadstrocliente.setBackground(new java.awt.Color(255, 255, 255));
         titulocadstrocliente.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -59,16 +63,16 @@ public class CadastroServ extends javax.swing.JFrame {
 
         descricao.setForeground(new java.awt.Color(255, 255, 255));
         descricao.setText("Descrição:");
-        getContentPane().add(descricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 100, -1));
+        getContentPane().add(descricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 100, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         campoDescricao.setViewportView(jTextArea1);
 
-        getContentPane().add(campoDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 370, 110));
+        getContentPane().add(campoDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 390, 110));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/background cadastros.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 840));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/background cadastros.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -120,6 +124,7 @@ public class CadastroServ extends javax.swing.JFrame {
     private javax.swing.JTextField campoValor;
     private javax.swing.JLabel descricao;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JSeparator separador;
     private javax.swing.JLabel servico;
