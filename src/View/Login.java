@@ -1,7 +1,7 @@
 package View;
 
 import Controller.LoginController;
-import DAO.UsuarioDAO;
+import ModelDAO.UsuarioDAO;
 import Model.Funcionario;
 import javax.swing.JTextField;
 import java.sql.*;
