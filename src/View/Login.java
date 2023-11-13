@@ -1,11 +1,7 @@
 package View;
 
 import Controller.LoginController;
-import DAO.UsuarioDAO;
-import Model.Funcionario;
 import javax.swing.JTextField;
-import java.sql.*;
-import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
 
@@ -37,7 +33,10 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(camposenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 470, 410, 40));
 
-        botaologin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/Botão de entrar.png"))); // NOI18N
+        botaologin.setBackground(new java.awt.Color(0, 255, 0));
+        botaologin.setFont(new java.awt.Font("Segoe UI", 1, 25)); // NOI18N
+        botaologin.setText("LOGIN");
+        botaologin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         botaologin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaologinActionPerformed(evt);
@@ -54,8 +53,7 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(campologin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, 410, 40));
 
-        planodefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/viewimagens/Brian estética automotiva.jpg"))); // NOI18N
-        planodefundo.setText("pla");
+        planodefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/Brian estética automotiva.jpg"))); // NOI18N
         getContentPane().add(planodefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 890));
 
         pack();
@@ -70,32 +68,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_campologin1ActionPerformed
 
     private void botaologinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaologinActionPerformed
-        try {
-            String usuario_nome, senha_usuario;
-            usuario_nome = campologin1.getText();
-            senha_usuario = camposenha.getText();
-
-            // Cria um objeto Usuario com as informações de usuário e senha.
-            Funcionario pessoa = new Funcionario(usuario_nome, senha_usuario);
-            pessoa.setEmail(usuario_nome);
-            pessoa.setSenha(senha_usuario);
-
-            // Cria um objeto UsuarioDAO para realizar operações no banco de dados.
-            UsuarioDAO objUsuarioDao = new UsuarioDAO();
-            ResultSet rsUsuarioDAO = objUsuarioDao.autenticaUsuario(pessoa);
-
-            if (rsUsuarioDAO.next()) {
-                // Se houver um resultado na consulta, redireciona para a próxima tela.
-                MenuPrinc objFrmPrincpalView = new MenuPrinc();
-                objFrmPrincpalView.setVisible(true);
-                //objFrmPrincpalView.dispose(); // Fecha a tela de login.
-            } else {
-                JOptionPane.showMessageDialog(null, "Usuario ou senha Incorretos!"); // Exibe uma mensagem de erro.
-            }
-
-        } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null, erro); // Trata exceções do banco de dados e exibe mensagens de erro.
-        }
+        controller.entraNoSistema();
     }//GEN-LAST:event_botaologinActionPerformed
 
     public JTextField getCampologin1() {

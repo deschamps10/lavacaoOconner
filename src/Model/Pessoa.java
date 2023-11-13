@@ -5,14 +5,14 @@ package Model;
         
         protected int id;
         protected String nome;
-        protected char sexo;
+        protected String sexo;
         protected String dataNascimento;
         protected String cpf;
         protected String telefone;
         protected String email;
 
 
-    public Pessoa(int id, String nome, char sexo, String dataNascimento, String cpf, String telefone, String email) {
+    public Pessoa(int id, String nome, String sexo, String dataNascimento, String cpf, String telefone, String email) {
         this.id = id;
         this.nome = nome;
         this.sexo = sexo;
@@ -22,7 +22,7 @@ package Model;
         this.email = email;
     }
 
-    public Pessoa(String nome, char sexo, String dataNascimento, String cpf, String telefone, String email) {
+    public Pessoa(String nome, String sexo, String dataNascimento, String cpf, String telefone, String email) {
         this.nome = nome;
         this.sexo = sexo;
         this.dataNascimento = dataNascimento;
@@ -31,9 +31,16 @@ package Model;
         this.email = email;
     }
 
+    public Pessoa(String nome, String telefone) {
+        this.nome = nome;
+        this.telefone = telefone;
+    }
+
     public Pessoa(String nome) {
         this.nome = nome;
     }
+    
+    
     
 
     public int getId() {
@@ -52,11 +59,11 @@ package Model;
         this.nome = nome;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 

@@ -8,7 +8,7 @@ package Model;
         private String senha;
         private String nivelAcesso;
 
-    public Funcionario(int id, String nome, char sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento, String senha, String nivelAcesso) {
+    public Funcionario(int id, String nome, String sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento, String senha, String nivelAcesso) {
         super(id, nome, sexo, dataNascimento, cpf, telefone, email);
         this.endereco = endereco;
         this.complemento = complemento;
@@ -17,7 +17,7 @@ package Model;
         this.nivelAcesso = nivelAcesso;
     }
 
-    public Funcionario(String nome, char sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento, String senha, String nivelAcesso) {
+    public Funcionario(String nome, String sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento, String senha, String nivelAcesso) {
         super(nome, sexo, dataNascimento, cpf, telefone, email);
         this.endereco = endereco;
         this.complemento = complemento;
@@ -25,8 +25,6 @@ package Model;
         this.senha = senha;
         this.nivelAcesso = nivelAcesso;
     }
-    
-    
 
     public Funcionario(String email, String senha) {
         super(email);

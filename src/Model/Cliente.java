@@ -6,14 +6,14 @@ package Model;
         private String endereco;
         private String complemento;
 
-    public Cliente(int id, String nome, char sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento) {
+    public Cliente(int id, String nome, String sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento) {
         super(id, nome, sexo, dataNascimento, cpf, telefone, email);
         this.cep = cep;
         this.endereco = endereco;
         this.complemento = complemento;
     }
 
-    public Cliente(String nome, char sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento) {
+    public Cliente(String nome, String sexo, String dataNascimento, String cpf, String telefone, String email, String cep, String endereco, String complemento) {
         super(nome, sexo, dataNascimento, cpf, telefone, email);
         this.cep = cep;
         this.endereco = endereco;
@@ -27,6 +27,11 @@ package Model;
         this.endereco = endereco;
         this.complemento = complemento;
     }
+    
+    public Cliente(String nome, String telefone){
+        super(nome, telefone);
+    }
+    
 
     public String getCep() {
         return cep;

@@ -1,40 +1,62 @@
 package Model;
 
+
 public class Agendamento {
     
     private int id;
-    private Cliente cliente;
-    private Servico servico;
-    private float valor;
+    private String nome_cliente;
+    private String nome_servico;
+    private String valor;
     private String data;
     private String hora;
     private String observacao;
+    
+//    private Cliente cliente;
+//    private Servico servico;
 
-    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, String hora, String observacao) {
+//    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, String hora, String observacao) {
+//        this.id = id;
+//        this.cliente = cliente;
+//        this.servico = servico;
+//        this.valor = valor;
+//        this.data = data;
+//        this.hora = hora;
+//        this.observacao = observacao;
+//    }
+
+//    public Agendamento(Cliente cliente, Servico servico, float valor, String data, String hora, String observacao) {
+//        this.cliente = cliente;
+//        this.servico = servico;
+//        this.valor = valor;
+//        this.data = data;
+//        this.hora = hora;
+//        this.observacao = observacao;
+//    }
+
+    public Agendamento(int id, String nome_cliente, String nome_servico, String valor, String data, String hora, String observacao) {
         this.id = id;
-        this.cliente = cliente;
-        this.servico = servico;
+        this.nome_cliente = nome_cliente;
+        this.nome_servico = nome_servico;
         this.valor = valor;
         this.data = data;
         this.hora = hora;
         this.observacao = observacao;
     }
 
-    public Agendamento(Cliente cliente, Servico servico, float valor, String data, String hora, String observacao) {
-        this.cliente = cliente;
-        this.servico = servico;
+    public Agendamento(String nome_cliente, String nome_servico, String valor, String data, String hora, String observacao) {
+        this.nome_cliente = nome_cliente;
+        this.nome_servico = nome_servico;
         this.valor = valor;
         this.data = data;
         this.hora = hora;
         this.observacao = observacao;
     }
 
-    public Agendamento(Cliente cliente, Servico servico, String data, String hora) {
-        this.cliente = cliente;
-        this.servico = servico;
-        this.data = data;
-        this.hora = hora;
+    public Agendamento() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
+    
     
     
     
@@ -48,27 +70,27 @@ public class Agendamento {
         this.id = id;
     }
 
-    public Cliente getCliente() {
-        return cliente;
-    }
+//    public Cliente getCliente() {
+//        return cliente;
+//    }
+//
+//    public void setCliente(Cliente cliente) {
+//        this.cliente = cliente;
+//    }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
+//    public Servico getServico() {
+//        return servico;
+//    }
+//
+//    public void setServico(Servico servico) {
+//        this.servico = servico;
+//    }
 
-    public Servico getServico() {
-        return servico;
-    }
-
-    public void setServico(Servico servico) {
-        this.servico = servico;
-    }
-
-    public float getValor() {
+    public String getValor() {
         return valor;
     }
 
-    public void setValor(float valor) {
+    public void setValor(String valor) {
         this.valor = valor;
     }
 
@@ -95,6 +117,26 @@ public class Agendamento {
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
+
+    public String getNome_cliente() {
+        return nome_cliente;
+    }
+
+    public void setNome_cliente(String nome_cliente) {
+        this.nome_cliente = nome_cliente;
+    }
+
+    public String getNome_servico() {
+        return nome_servico;
+    }
+
+    public void setNome_servico(String nome_servico) {
+        this.nome_servico = nome_servico;
+    }
+    
+    
+    
+    
     
     
     
