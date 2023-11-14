@@ -1,6 +1,7 @@
 package View;
 
 import Controller.CadastroServController;
+import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -97,6 +98,7 @@ public class CadastroServ extends javax.swing.JFrame {
 
     private void botaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarActionPerformed
         controller.cadastrarServico();
+        JOptionPane.showMessageDialog(null,"Cadastro feito com sucesso.");
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoCadastrarActionPerformed
 

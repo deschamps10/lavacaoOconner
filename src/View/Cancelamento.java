@@ -4,17 +4,29 @@
  */
 package View;
 
+import Controller.CancelamentoController;
+import DTO.AgendamentoDTO;
+import Model.DAO.AgendamentoDAO;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Usuario
  */
 public class Cancelamento extends javax.swing.JFrame {
+    
+    private final CancelamentoController controller;
 
     /**
      * Creates new form agenda
      */
     public Cancelamento() {
         initComponents();
+        this.controller = new CancelamentoController(this);
+        ListarAgendamentos();
     }
 
     /**
@@ -28,22 +40,23 @@ public class Cancelamento extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        TabelaAgendamentos = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         Observação = new javax.swing.JLabel();
         campoObservacao = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         id = new javax.swing.JLabel();
         campoId = new javax.swing.JTextField();
+        buttonVoltar = new javax.swing.JButton();
         teladefundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/Botão voltar PRETO.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, -20, 180, 140));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, -30, 180, 140));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        TabelaAgendamentos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -54,7 +67,7 @@ public class Cancelamento extends javax.swing.JFrame {
                 "ID", "Nome", "Serviço", "Valor", "Data", "Hora", "Observação"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(TabelaAgendamentos);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 1140, 310));
 
@@ -67,7 +80,7 @@ public class Cancelamento extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 630, 480, 40));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 620, 480, 40));
 
         Observação.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         Observação.setText("Observação:");
@@ -87,6 +100,14 @@ public class Cancelamento extends javax.swing.JFrame {
         campoId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(campoId, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 260, 30));
 
+        buttonVoltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        buttonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonVoltarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(buttonVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 10, 90, 80));
+
         teladefundo.setBackground(new java.awt.Color(0, 0, 0));
         teladefundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/Fundo 1920 Agenda.jpg"))); // NOI18N
         teladefundo.setMaximumSize(new java.awt.Dimension(3000, 1500));
@@ -96,8 +117,14 @@ public class Cancelamento extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        controller.CancelarAgendamento();
+        JOptionPane.showMessageDialog(null,"Agendamento cancelado com sucesso.");
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void buttonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarActionPerformed
+        controller.voltarMenuPrinc();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,14 +178,56 @@ public class Cancelamento extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Observação;
+    private javax.swing.JTable TabelaAgendamentos;
+    private javax.swing.JButton buttonVoltar;
     private javax.swing.JTextField campoId;
     private javax.swing.JScrollPane campoObservacao;
     private javax.swing.JLabel id;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel teladefundo;
     // End of variables declaration//GEN-END:variables
+
+private void ListarAgendamentos(){
+        
+        try {
+            
+            AgendamentoDAO objAgendamentoDAO = new AgendamentoDAO();
+            
+            DefaultTableModel model = (DefaultTableModel) TabelaAgendamentos.getModel();
+            model.setNumRows(0);
+            
+            ArrayList<AgendamentoDTO> lista = objAgendamentoDAO.PesquisarAgendamento();
+            
+            for(int num = 0; num < lista.size(); num++){
+                model.addRow(new Object[]{
+                    lista.get(num).getID(),
+                    lista.get(num).getNomeClient(),
+                    lista.get(num).getServico(),
+                    lista.get(num).getValor(),
+                    lista.get(num).getData(),
+                    lista.get(num).getHora(),
+                    lista.get(num).getObs()
+                });
+            }
+            
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(null,erro);
+        }
+        
+    }
+
+    public JTextField getCampoId() {
+        return campoId;
+    }
+
+    public void setCampoId(JTextField campoId) {
+        this.campoId = campoId;
+    }
+
+
+
+
 }

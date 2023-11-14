@@ -6,6 +6,7 @@ package View;
 
 import Controller.CadastroCliController;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -201,6 +202,7 @@ public class CadastroCli extends javax.swing.JFrame {
 
     private void botaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarActionPerformed
         controller.cadastrarCliente();
+        JOptionPane.showMessageDialog(null,"Cadastro feito com sucesso.");
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoCadastrarActionPerformed
 
